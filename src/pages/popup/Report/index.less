@@ -1,0 +1,78 @@
+.contect{
+  padding : 0px;
+  min-height: calc(~"100%  - 56px");
+  .pointer{
+    cursor: pointer;
+    &:hover{
+      color: rgba(3, 196, 107, 1);
+    }
+  }
+
+  .count-list{
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom :solid 1px rgba(229,229,229,1);
+    color:rgba(51,51,51,1);
+    font-size:13px;
+    .divider{
+      height: auto;
+    }
+  }
+
+  .content-list{
+    width: 100%;
+    height: calc(~'100% - 70px');
+    padding: 0px 15px;
+
+    .filter-list{
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto;
+      .filter-select{
+        width: 40%;
+      }
+      .filter-search{
+        width: 270px;
+      }
+    }
+
+    .tabs{
+      :global{
+        .ant-tabs-tab{
+          background:rgba(245,245,245,1);
+          border : 1px solid transparent;
+          &.ant-tabs-tab-active{
+            background:rgba(255,255,255,1);
+            font-weight: normal;
+            border:1px solid rgba(229, 229, 229, 1)
+          }
+        }
+      }
+    }
+
+    .table{
+      :global{
+        .ant-table-body{
+          margin: 0px;
+        }
+      }
+      thead th{
+        color:rgba(136,136,136,1);
+        background-color:rgba(250,250,250,1) !important;
+      }
+    }
+
+    .options{
+      width: 58px;
+      text-align: center;
+      display: inline-block;
+    }
+
+  }
+
+  .table{
+    width: 100%;
+  }
+}

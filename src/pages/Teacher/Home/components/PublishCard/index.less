@@ -1,0 +1,152 @@
+.card {
+  width: 230px !important;
+  height: 360px;
+  padding-top: 10px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 2px;
+  border: 1px solid #eee;
+  margin-left: 30px;
+  &:first-child{
+    margin-left: 0px;
+  }
+
+  .topimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 104px;
+      height: 104px;
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    line-height: 33px;
+    margin-top: 3px;
+  }
+
+  .tips {
+    background: rgba(230, 249, 240, 1);
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(3, 196, 107, 1);
+    line-height: 30px;
+    height: 30px;
+    width: 150px;
+    margin: 8px auto 16px;
+    margin-top: 9px;
+    text-align: center;
+  }
+
+  .contentCard {
+    height: 90px;
+
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4px;
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        border: 1px solid rgba(136, 136, 136, 1);
+        border-radius: 6px;
+      }
+
+      .normal {
+        font-size: 13px;
+        font-weight: 400;
+        color: #888888;
+        line-height: 18px;
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .publish {
+      width: 86px;
+      height: 36px;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 18px;
+      border: 1px solid rgba(51, 51, 51, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333333;
+    }
+
+    .textColor {
+      color: #333333;
+      padding-left: 10px !important;
+    }
+
+    .disablebtn {
+      width: 92px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 18px;
+      border: 1px solid rgba(51, 51, 51, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(51, 51, 51, 0.2);
+      cursor: not-allowed;
+    }
+
+  }
+
+
+  &:hover {
+    background: linear-gradient(358deg, rgba(255, 205, 105, 1) 0%, rgba(255, 174, 28, 1) 100%);
+    box-shadow: 0px 2px 30px 0px rgba(253, 196, 57, 0.5);
+
+    .title {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .tips {
+      background: rgba(0, 0, 0, 0.15);
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .contentCard {
+      .flex {
+        .dot {
+          border: 1px solid rgba(255, 255, 255, 1);
+        }
+
+        .normal {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+
+    .flex {
+      .publish {
+        background: rgba(51, 51, 51, 1);
+        color: #fff;
+        cursor: pointer;
+        i,
+        span {
+          color: #fff !important;
+        }
+      }
+
+      .textColor {
+        color: #fff;
+        padding-left: 10px !important;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,179 @@
+// draw.less
+.draw {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 36px;
+  line-height: 36px;
+
+  // 工具类
+  &-tool {
+    width: 245px;
+    display: flex;
+    background: #333;
+    align-items: center;
+    border-radius: 4px;
+    &-item {
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border-radius: 2px;
+      color: #d8d8d8;
+      text-align: center;
+      margin: 3px;
+      line-height: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      &.selected {
+        background: rgba(0, 0, 0, 1);
+        color: #03c46b;
+      }
+      &:hover {
+        color: #03c46b;
+      }
+    }
+    &-divider {
+      margin: 0 3px;
+      top: auto;
+      height: 1.2em;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    &-clear {
+      font-size: 13px;
+      text-align: center;
+      flex: 1;
+      color: #d8d8d8;
+      cursor: pointer;
+      &:hover {
+        color: #03c46b;
+      }
+    }
+  }
+
+  // 线条的粗细，和颜色
+  &-font {
+    display: flex;
+    background: #333;
+    align-items: center;
+    border-radius: 4px;
+    margin-left: 10px;
+    // 粗细
+    &-weight {
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border-radius: 2px;
+      color: #d8d8d8;
+      text-align: center;
+      margin: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      > div {
+        border-radius: 50%;
+        background: rgba(204, 204, 204, 1);
+      }
+      &.selected > div,
+      &:hover > div {
+        background: #03c46b;
+      }
+    }
+
+    // 分割线
+    &-divider {
+      margin: 0 10px 0 3px;
+      top: auto;
+      height: 1.2em;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    // 颜色
+    &-color {
+      width: 16px;
+      height: 16px;
+      border-radius: 1px;
+      border: 1px solid rgba(255, 255, 255, 1);
+      margin-right: 8px;
+      cursor: pointer;
+      &:hover {
+        border-color: #03c46b;
+      }
+      &.selected {
+        position: relative;
+        &:after {
+          content: '\E665';
+          font-family: 'iconfont', sans-serif;
+          display: block;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          position: absolute;
+          bottom: -9px;
+          right: -9px;
+          background: #03c46b;
+          color: #fff;
+          font-size: 12px;
+          line-height: 18px;
+          padding-left: 2px;
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
+
+  // 选择画板模式还是试卷模式
+  &-type {
+    margin-left: auto;
+    :global {
+      .ant-radio-button-wrapper {
+        background: rgba(51, 51, 51, 1);
+        font-size: 13px;
+        color: rgba(216, 216, 216, 1);
+        height: 36px;
+        line-height: 36px;
+        border-color: transparent;
+        &.ant-radio-button-wrapper-checked {
+          color: rgba(255, 255, 255, 1);
+          background: rgba(3, 196, 107, 1);
+          &:hover {
+            background: rgba(3, 196, 107, 1);
+          }
+        }
+        &:hover {
+          color: rgba(3, 196, 107, 1);
+        }
+      }
+    }
+  }
+
+  // 输入框内容显示
+  &-textArea {
+    // width: 1px;
+    // max-width: 1px;
+    // height: 1px;
+    // max-height: 1px;
+    // pointer-events: none;
+    // user-select: none;
+    // visibility: hidden;
+  }
+}
+
+:global {
+  #drawDiv {
+    font: normal normal 16px/26px Arial, serif;
+    min-width: 5px;
+    border: 1px dotted #888;
+    position: absolute;
+    z-index: 3;
+    width: auto;
+    display: inline;
+    word-break: break-all;
+    white-space: pre-wrap;
+    &:focus {
+      outline-color: transparent;
+    }
+  }
+}

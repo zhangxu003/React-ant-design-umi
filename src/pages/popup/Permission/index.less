@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  .tip {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 110, 74, 1);
+    line-height: 17px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+  }
+  .content {
+    width: 525px;
+    margin-top: 5px;
+    &-header {
+      margin-bottom: 10px;
+      &-title {
+        color: rgba(51, 51, 51, 1);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 40px;
+      }
+      &-subtitle {
+        color: rgba(136, 136, 136, 1);
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+    &-show {
+      width: 525px;
+      height: 430px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+  .silder {
+    flex: 1;
+    margin-left: 10px;
+    padding-top: 23px;
+    &-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      > div {
+        min-width: 100px;
+        text-align: center;
+      }
+      &-title {
+        color: rgba(136, 136, 136, 1);
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 40px;
+      }
+      &-standard {
+        color: #333;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 40px;
+      }
+      &-major {
+        color: rgba(246, 161, 28, 1);
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 40px;
+      }
+    }
+    &-menu {
+      height: 51px;
+      line-height: 51px;
+      &-title {
+        color: rgba(51, 51, 51, 1);
+        font-weight: bold;
+        box-shadow: 6px 0 0 0 #fff inset, -6px 0 0 0 #fff inset, 0 -1px 0 0 #e5e5e5 inset;
+        cursor: pointer;
+      }
+      &-select {
+        .silder-menu-title {
+          position: relative;
+          color: #fff;
+          font-size: 16px;
+          background: rgba(3, 196, 107, 1);
+          border-radius: 8px;
+          box-shadow: none;
+          &::before {
+            position: absolute;
+            top: calc(50% - 10px);
+            left: -20px;
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-right: 15px solid rgba(3, 196, 107, 1);
+          }
+        }
+      }
+      .iconfont {
+        font-size: 20px;
+        &.has-power {
+          color: #03c46b;
+        }
+        &.no-power {
+          color: #ff6e4a;
+        }
+      }
+    }
+  }
+}
+
+.warning {
+  margin: 5px 0 0 10px;
+  padding: 4px 15px 4px 30px;
+  :global {
+    .ant-alert-icon {
+      top: 8px;
+      left: 10px;
+    }
+    .ant-alert-message {
+      color: rgba(255, 110, 74, 1);
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+}
+
+.infoForModal {
+  :global {
+    .ant-modal-close {
+      display: block;
+    }
+    .ant-modal-confirm-btns {
+      display: none;
+    }
+  }
+}

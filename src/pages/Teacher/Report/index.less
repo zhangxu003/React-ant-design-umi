@@ -1,0 +1,31 @@
+.report {
+    background: #f5f5f5;
+    padding: 0px 30px 10px;
+    :global {
+      .wrapperMain {
+        margin: 0px 0px !important;
+        position: relative;
+        min-height: calc(100vh - 98px);
+        background: #fff;
+        overflow: hidden;
+        border-radius:5px;
+        box-shadow:0px 2px 4px 0px rgba(0,0,0,0.1);
+        
+        &>div:first-child {
+          display: none;
+        }
+        &>div>div {
+          max-width: 100% !important;
+        }
+      }
+    }
+}
+.top{
+    .ant-breadcrumb{
+      margin-top: 8px;
+    }
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

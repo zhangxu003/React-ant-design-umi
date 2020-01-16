@@ -1,0 +1,111 @@
+.close{
+  :global{
+    .ant-modal-close{
+      display: block;
+    }
+  }
+}
+.confirm{
+  :global{
+    .ant-modal-confirm-content{
+      margin-left: 0px;
+    }
+    .ant-modal-body{
+      padding: 30px !important;
+    }
+    .ant-modal-confirm-btns .ant-btn{
+      border-radius:20px;
+      width: 80px;
+    }
+
+  }
+  .title{
+    font-size:20px;
+    font-weight:500;
+    color:rgba(28,36,56,1);
+  }
+
+  .SecretKeyModal {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    .item{
+      width: 60px;
+      height: 60px;
+      border-bottom: 1px solid rgba(229,229,229,1);
+      .around{
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        margin: 23px auto;
+        background: rgba(51,51,51,1);
+      }
+    }
+  }
+
+  .keyword{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 78px;
+    .keyword-num{
+      display: flex;
+      width: 204px;
+      justify-content: space-between;
+      align-content: space-between;
+      flex-wrap: wrap;
+      .num-button{
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        background:rgba(255,255,255,1);
+        border:1px solid rgba(204, 204, 204, 1);
+        border-radius:50%;
+        text-align: center;
+        line-height: 36px;
+        font-size:14px;
+        color:rgba(0,0,0,1);
+        font-weight:600;
+        &:hover{
+          background:rgba(219,255,238,1);
+          border-color:transparent;
+          color:rgba(3,196,107,1);
+        }
+        &:active{
+          background:rgba(200,240,221,1);
+          border-color:transparent;
+          color:rgba(3,196,107,1);
+        }
+      }
+    }
+    .keyword-del{
+      cursor: pointer;
+      width:78px;
+      height:78px;
+      background:rgba(255,255,255,1);
+      border:1px solid rgba(204, 204, 204, 1);
+      border-radius:10px;
+      line-height: 78px;
+      text-align: center;
+      font-size:14px;
+      color:rgba(51,51,51,1);
+      font-weight:600;
+      &:hover{
+        background:rgba(219,255,238,1);
+        border-color:transparent;
+        color:rgba(3,196,107,1);
+      }
+      &:active{
+        background:rgba(200,240,221,1);
+        border-color:transparent;
+        color:rgba(3,196,107,1);
+      }
+    }
+  }
+
+
+}
+
+
+

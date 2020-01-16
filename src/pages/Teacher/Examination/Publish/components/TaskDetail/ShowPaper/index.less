@@ -1,0 +1,40 @@
+.card{
+  height: 100%;
+  :global{
+    .icon-error{
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .ant-card-head{
+      height: 85px;
+    }
+    .ant-card-body{
+      height: calc( 100% - 85px );
+      background:rgba(245,245,245,1);
+      overflow: auto;
+      padding: 0px;
+    }
+  }
+
+  .card-title{
+    .name{
+      font-size:20px;
+      color:rgba(51,51,51,1);
+      line-height:28px;
+    }
+    .tips{
+      margin-top:5px;
+      color: #888888;
+      font-size: 14px;
+      .black{
+        color:#333333;
+      }
+    }
+  }
+
+  .content{
+    width: 846px;
+    margin: 10px auto;
+  }
+
+}

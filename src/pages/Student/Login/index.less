@@ -1,0 +1,231 @@
+@import '~antd/lib/style/themes/default.less';
+.teacher_page {
+  width: 100%;
+  height: 100vh;
+  background: none;
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width: 1024px){
+    margin-top: -4%;
+  }
+  .hand{
+    font-size:16px;
+    color:rgba(255,255,255,1);
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    letter-spacing: 1px;
+    &.disabled{
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    &:hover{
+      opacity: 0.7;
+      >div{
+        border-bottom: 1px solid rgba(255,255,255,0.7);
+      }
+    }
+    >div{
+      font-size:14px;
+      line-height: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      font-variant: tabular-nums;
+      display: inline-block;
+      border-bottom: 1px solid rgba(255,255,255,1);
+      margin-left: 3px;
+    }
+  }
+}
+.checkStatus {
+  margin: 0px auto 0;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+:global {
+    .login-box {
+        text-align: center;
+    }
+  .studentLogin {
+    display: flex;
+    width: 445px;
+    height: 110px;
+    position: relative;
+    padding: 0px 0px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 60px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 50px auto 30px;
+
+    .seatNumber {
+        width: 120px;
+        height: 100%;
+        border-right: 1px solid #E5E5E5;
+        position: relative;
+        .number {
+            padding-top: 5px;
+            height: 75px;
+            text-align: center;
+            color: #333333;
+            font-weight:500;
+            font-size: 45px;
+        }
+        .tip {
+            color: #333333;
+            text-align: center;
+            font-size: 13px;
+        }
+        .edit {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width:120px;
+            height:110px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background:rgba(0,0,0,0.8);
+            text-align: center;
+            padding: 15px 0px;
+            .edit-icon {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                margin: 0 auto 5px;
+                border-radius: 25px;
+                background-color: #fff;
+                i {
+                    font-size: 23px;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .text {
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+        .focus {
+            display: none;
+        }
+        .unfocus {
+            display: block;
+        }
+    }
+    .seatNumber:hover {
+        .focus {
+            display: block;
+        }
+        .unfocus {
+            display: none;
+        }
+    }
+
+   .input {
+       padding: 10px 10px;
+       width: calc(~'100% - 120px');
+       height: 100%;
+       input {
+           width: 100%;
+           height: 100%;
+           font-size: 20px;
+           text-align: center;
+           border: none;
+           outline: none;
+           &:focus{
+            &::-webkit-input-placeholder{
+              opacity: 0;
+            }
+           }
+           &:disabled{
+             background-color: white;
+           }
+       }
+       input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+   }
+
+  }
+  .login {
+    margin: 0px auto;
+    width: 445px;
+    height: 50px !important;
+    border-radius: 25px;
+    background-color: #FF9900;
+    color: #fff;
+    &:hover,&:focus {
+        background-color: #FF9900;
+        color: #fff;
+    }
+  }
+  .confirm-box {
+    //   width: 444px;
+      height: 202px;
+      background-color: #fff;
+      border-radius: 10px;
+      position: relative;
+    //   left: calc(~'50% - 222px');
+    //   top:330px;
+      text-align: center;
+      padding: 30px 20px;
+      margin: 50px auto;
+
+      .topCard {
+        //   width: 400px;
+          height: 20px;
+          background-color: rgba(249,249,249,1);
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          position: absolute;
+          left: 5%;
+          right: 5%;
+          top:-20px;
+      }
+      .top {
+          display: flex;
+          align-items: center;
+          padding-top: 30px;
+          .ant-divider, .ant-divider-vertical {
+              height: 44px;
+          }
+          .item {
+            padding: 0 40px;
+            .tit {
+                font-size: 14px;
+                color: #888;
+            }
+            .content {
+                color: #333333;
+                font-size: 20px;
+                font-weight:600;
+            }
+          }
+      }
+      .btns {
+        padding-top: 40px;
+        margin: 0 auto;
+        .btn {
+            width: 100px;
+            border-radius: 20px;
+            border-color: #CCCCCC;
+            &:hover,&:focus {
+                border-color: #CCCCCC;
+            }
+        }
+        .link {
+            margin-left: 20px;
+            background-color: #FF9900;
+            color: #fff;
+        }
+    }
+  }
+
+}

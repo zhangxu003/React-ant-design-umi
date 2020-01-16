@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>API JS SDK</title>
+<style type="text/css">
+    a:link, a:visited {
+        color: #00e;
+        text-decoration: none;
+    }
+    
+    a:hover, a:active {
+        color: #00e;
+        text-decoration: underline;
+    }
+    
+    body {
+        text-align: center;
+    }
+    
+    #container {
+        background: #eee;
+        width: 800px;
+        min-height: 600px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    #containerInner {
+        position: relative;
+        padding: 20px;
+    }
+    
+    dt {
+        margin-top: 20px;
+    }
+    
+    dd {
+        margin-top: 10px;
+    }
+</style>
+<script type="text/javascript" src="recorder/speex.js"></script>
+<!-- <script type="text/javascript" src="Common.js"></script> -->
+<script type="text/javascript" src="webSocket/md5.js"></script>
+<script type="text/javascript" src="webSocket/socket_chivox.js"></script>
+<script type="text/javascript" src="webSocket/socket_VB.js"></script>
+<script type="text/javascript" src="player/audioPlayer.js"></script>
+<script type="text/javascript" src="recorder/swfobject.js"></script>
+<script type="text/javascript" src="recorder/H5Recorder.js"></script>
+<script type="text/javascript" src="recorder/flashRecorder.js"></script>
+<script type="text/javascript" src="VB.js"></script>
+<script type="text/javascript">
+window.onload=function (){ 
+    window.lists=[];
+    vb.getRecorderManager().onStart(function(){
+        console.log("V_onstart");
+    })
+    vb.getRecorderManager().onEval(function(result){
+        console.log("V_onEval:---"+result);
+    })
+    vb.getRecorderManager().onStop(function(id){
+        lists.push(id.tokenId);
+        console.log(id);
+        console.log("V_rec_onStop");
+    })
+    vb.getRecorderManager().onVolumeMeter(function(data){
+        console.log("V_onVolumeMeter:");
+        console.log(data);
+    })
+    vb.getRecorderManager().onError(function(data){
+        console.log("V_onError:");
+        console.log(data);
+    })
+
+    vb.getPlayerManager().onPlay(function(data){
+        console.log("V_onPlay:  ");
+        console.log(data);
+    })
+    vb.getPlayerManager().onStop(function(data){
+        console.log("V_onStop:  ");
+        console.log(data);
+    })
+    vb.getPlayerManager().onError(function(data){
+        console.log("V_onError:");
+        console.log(data);
+    })
+
+    window.start_record=function(){
+       let a=vb.getRecorderManager().start({
+            duration: 3,
+            nsx:false,
+            resourceType:"off",
+            request:{
+                kernelType:"eval.word.en",
+                rank:100,
+                reference: {
+                    lms:[{
+                        text:"good"
+                    }]
+                }
+            }
+        })
+        // let a=vb.getRecorderManager().start({
+        //     duration: 3,
+        //     hint: true,
+        //     nsx:false,
+        //     request:{
+        //         refText:"good",
+        //         coreType:"en.word.score",
+        //         rank:100,
+        //         userId:" ",
+        //         attachAudioUrl:1
+        //     }
+        // })  //  "start": "cross-env APP_TYPE=site umi dev",
+    }
+    window.stop_record=function(){
+        vb.getRecorderManager().stop(function(){
+
+        });
+    }
+    window.replay_start=function(){
+        var a=lists.length;
+        vb.getPlayerManager().play({
+            tokenId:lists[a-1]
+        });
+    }
+    window.stop_replay=function(){
+        vb.getPlayerManager().stop();
+    }
+
+}
+   
+</script>
+</head>
+<body>
+    <div id="container">
+        <div id="containerInner">
+        <div id="recorder_swf"></div>
+            <div id="content">
+                <button id="start_record" onclick="start_record();"> start_record</button>
+                <button id="stop_record"  onclick="stop_record();">stop_record</button>
+                <button id="start_replay" onclick="replay_start();">start_replay</button>
+                <button id="stop_replay" onclick="stop_replay();">stop_play</button>            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

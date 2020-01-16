@@ -1,0 +1,404 @@
+.report{
+  min-height: calc(~"100%  - 56px");
+  background:rgba(255,255,255,1);
+  box-shadow:0px 10px 50px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+
+  // 关闭按钮
+  .close{
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+    color: rgba(51,51,51,1);
+    font-size: 16px;
+    z-index: 2;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+
+  // 概要报告
+  .outline{
+    width: 490px;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 20px;
+
+    // 报告名称
+    .title{
+      font-size:20px;
+      font-weight:500;
+      color:rgba(51,51,51,1);
+      margin-top: 30px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    // 圆形图
+    .chart{
+      height: 250px;
+      width: 100%;
+      // background:rgba(3,196,107,1);
+      // box-shadow:0px 0px 40px 0px rgba(3,196,107,0.5);
+      // border-radius: 50%;
+      margin: 25px auto 0px;
+      .empty{
+        padding-top: 50px;
+        .empty-icon{
+          width: 80px;
+          height: 80px;
+          background:rgba(230,230,230,1);
+          border-radius:50%;
+          font-size: 36px;
+          color : rgba(136,136,136,1);
+          margin: 0px auto 0px;
+          line-height: 80px;
+        }
+        .empty-msg{
+          font-size:16px;
+          font-weight:500;
+          color:rgba(136,136,136,1);
+          margin-top: 30px;
+        }
+      }
+    }
+
+    // 设备数据
+    .nums{
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      font-size:14px;
+      font-weight:500;
+      color:rgba(51,51,51,1);
+      .num{
+        text-align: center;
+        font-size:30px;
+        font-weight:500;
+        color:rgba(136,136,136,1);
+        margin-bottom: 10px;
+      }
+      .divider{
+        margin: 10px;
+        height: auto;
+        top: 0px;
+      }
+    }
+
+    // 时长
+    .notice{
+      margin-top: 30px;
+      font-size:13px;
+      font-weight:400;
+      color:rgba(136,136,136,1);
+      line-height: 30px;
+    }
+
+    // 进入详情报告
+    .into-detail{
+      margin-top: 30px;
+      width:140px;
+      height:40px;
+      background:rgba(255,255,255,1);
+      border:1px solid rgba(204, 204, 204, 1);
+      border-radius:20px;
+      font-size:14px;
+      font-weight:500;
+      color:rgba(51,51,51,1);
+      &:hover{
+        border-color:transparent;
+        background: rgba(3,196,107,1);
+        color: #ffffff;
+        box-shadow: 1px 1px 4px 2px rgba(3,196,107,0.5);
+      }
+    }
+
+  }
+
+  // 详细报告
+  .detail{
+    :global{
+      .ant-card-bordered{
+        border-bottom-color: transparent;
+        .ant-card-head{
+          padding: 0 20px;
+        }
+        .ant-table-content{
+          border: 1px solid #e8e8e8;
+        }
+        .ant-table td { white-space: nowrap; }
+        // .ant-table-column-sorter{
+        //   position: relative;
+        //   margin:0px 0px 0px 3px;
+        //   vertical-align: text-bottom;
+        // }
+      }
+    }
+    .back-btn{
+      color : rgba(51,51,51,1);
+      cursor: pointer;
+      &:hover{
+        color:#03c46b;
+      }
+    }
+    .pointer{
+      cursor: pointer;
+      &:hover{
+        color: rgba(3, 196, 107, 1);
+      }
+    }
+
+    // 开始结束时间
+    .count-list{
+      padding: 10px 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      border-bottom :solid 1px rgba(229,229,229,1);
+      color:rgba(51,51,51,1);
+      font-size:13px;
+      .divider{
+        height: auto;
+      }
+    }
+
+    // 主体内容
+    .cards{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      // 卡片
+      .card{
+        margin-top: 10px;
+        width: 100%;
+        border: none;
+
+        // 卡片的title
+        .card-head{
+          font-size:14px;
+          font-weight:500;
+          color:rgba(51,51,51,1);
+          vertical-align: middle;
+          &:before{
+            content: "";
+            display:inline-block;
+            width:3px;
+            height:12px;
+            background:rgba(3,196,107,1);
+            border-radius:2px;
+            margin-right: 6px;
+            vertical-align: middle;
+          }
+        }
+
+        // 通用卡片内容呢样式
+        .inner{
+          //background: red;
+          background: rgba(250,250,250,1);
+          border-radius:5px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .half{
+            width: 50%;
+          }
+          .table{
+            padding: 20px 15px 0px;
+            :global{
+              .ant-table-body{
+                margin: 0px !important;
+              }
+            }
+          }
+        }
+
+        // 检测步骤
+        .check-step{
+          height:169px;
+          padding: 50px 20px 20px 20px;
+          .steps{
+            :global{
+              .ant-steps-item{
+                .ant-steps-item-tail{
+                  margin-left: 50px;
+                  &:after{
+                    height:1px;
+                    background:rgba(204,204,204,1);
+                    width: calc(100% - 52px);
+                    margin-left: 25px;
+                  }
+                }
+                .ant-steps-item-icon{
+                  margin-left: 47px;
+                }
+                .ant-steps-item-content{
+                  width: 100px;
+                  margin-top: 15px;
+                  .ant-steps-item-title{
+                    font-size:14px;
+                    font-weight:500;
+                    color:rgba(51,51,51,1);
+                  }
+                }
+              }
+            }
+            .dot{
+              width: 32px;
+              height: 32px;
+              line-height: 32px;;
+              border-radius: 50%;
+              background:rgba(204,204,204,1);
+              transform: translate(-50%,-50%);
+              color:rgba(255,255,255,1);
+              font-size:14px;
+              &.success{
+                background:rgba(3,196,107,1);
+              }
+              &.fail{
+                background:rgba(255,110,74,1);
+              }
+              &.none{
+                background:rgba(204,204,204,1);
+              }
+            }
+          }
+          // 标签提示
+          .tooltip{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 40px;
+            li{
+              width: 100px;
+              font-size:12px;
+              font-weight:400;
+              color:rgba(136,136,136,1);
+              &:before{
+                content: "";
+                display: inline-block;
+                width:8px;
+                height:8px;
+                background:rgba(3,196,107,1);
+                border-radius:2px;
+                vertical-align: baseline;
+                margin-right: 5px;
+              }
+              &.success:before{
+                background:rgba(3,196,107,1);
+              }
+              &.fail:before{
+                background:rgba(255,110,74,1);
+              }
+              &.none:before{
+                background:rgba(204,204,204,1);
+              }
+            }
+          }
+        }
+
+        // 异常统计
+        .error-count{
+          height: 242px;
+          overflow: hidden;
+          display: flex;
+          // 异常统计为空
+          .empty{
+            width: 180px;
+            text-align: center;
+            margin: 60px auto 0;
+            font-size:16px;
+            font-weight:500;
+            color:rgba(136,136,136,1);
+          }
+
+          // 统计图形
+          .error-show{
+            width: 98%;
+            max-width: 450px;
+            margin: 10px auto 0px;
+            position: relative;
+            .error-img{
+              height: 190px;
+              width: 300px;
+            }
+            .error-content{
+              position: absolute;
+              left : 200px;
+              right: 0px;
+              bottom: 0px;
+              font-size:13px;
+              font-weight:400;
+              color:rgba(136,136,136,1);
+              .long{
+                width: 150px;
+                display: inline-block;
+              }
+              .number{
+                font-size:20px;
+                font-weight:500;
+              }
+              .warn{
+                color:rgba(255,110,74,1);
+              }
+            }
+          }
+
+          // 异常的ip地址
+          .ip-type{
+            font-size:13px;
+            font-weight:500;
+            color:rgba(136,136,136,1);
+            margin-top: 15px;
+          }
+          .ip-list{
+            width: 98%;
+            margin-top: 10px;
+            margin-left: 5px;
+            height: 180px;
+            overflow-y: auto;
+            background:rgba(255,255,255,1);
+            border:1px solid rgba(229, 229, 229, 1);
+            display: flex;
+            padding: 10px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            >li{
+              width: 33.3%;
+              min-width: 110px;
+              font-size:14px;
+              font-weight:400;
+              color:rgba(51,51,51,1);
+              line-height: 30px;
+            }
+          }
+
+        }
+
+
+      }
+    }
+  }
+}
+
+
+// 常用颜色集合
+.color-success{
+  color:rgba(3,196,107,1) !important;
+}
+
+.color-error{
+  color:rgba(255,110,74,1) !important;
+}
+
+
+
+
+.white{
+  background: #ffffff
+}

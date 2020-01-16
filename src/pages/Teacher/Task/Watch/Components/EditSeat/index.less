@@ -1,0 +1,26 @@
+.seat{
+    height: 50px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 50px;
+    input{
+        border: 0;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 50px;
+        width: 85%;
+        outline: none!important;
+        &:focus{
+            outline: none!important;
+            border: 0!important;
+            box-shadow:none!important;
+        }
+    }
+    input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+}

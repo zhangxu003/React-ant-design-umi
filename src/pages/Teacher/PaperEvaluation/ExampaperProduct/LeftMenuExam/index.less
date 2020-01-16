@@ -1,0 +1,234 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~@/utils/utils.less';
+@ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+
+:global {
+  .ant-confirm-body > .anticon {
+    display: none;
+  }
+
+  .ant-confirm-btns {
+    .ant-btn {
+      display: none;
+    }
+
+    .ant-btn-primary {
+      display: inline;
+      border-radius: 32px;
+    }
+  }
+
+  .ant-menu-submenu-arrow {
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+  }
+
+  .validateClose {
+    .ant-modal-confirm-body > .anticon {
+      display: none;
+    }
+
+    .ant-btn {
+      display: none;
+    }
+
+    .ant-btn-primary {
+      display: inline;
+      border-radius: 32px;
+    }
+
+    .ant-modal-confirm-body .ant-modal-confirm-title {
+      font-size: 20px;
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  line-height: 60px;
+  padding-left: (@menu-collapsed-width - 32px) / 2;
+  transition: all 0.3s;
+  background: #f5f5f5;
+  overflow: hidden;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 27px;
+  }
+
+  h1 {
+    color: #333;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0 0 0 12px;
+    font-weight: 600;
+  }
+}
+
+.siders {
+  position: relative;
+  z-index: 10;
+  background: #333;
+  &.ligth {
+    background-color: white;
+
+    .logo {
+      background: white;
+
+      h1 {
+        color: #002140;
+      }
+    }
+  }
+  :global {
+    .left-middle {
+      margin: 20px 20px;
+      border-bottom: 1px solid @border;
+      padding-bottom: 10px;
+      margin-bottom: 0;
+
+      .paper-title {
+        font-size: 16px;
+        font-weight: @bold;
+        color: @black;
+      }
+
+      .flex {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        padding: 3px;
+        border: 1px solid rgba(229, 229, 229, 1);
+        border-radius: 7px;
+        justify-content: center;
+      }
+
+      .popoverrelative {
+        position: relative;
+      }
+
+      .popoverflex {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        padding: 3px;
+        margin-top: 5px;
+        border: 1px solid rgba(229, 229, 229, 1);
+        border-radius: 17px;
+        justify-content: space-between;
+        background: rgba(64, 67, 74, 1);
+        box-shadow: 0 2px 5px 0 rgba(26, 41, 60, 0.2);
+      }
+
+      .dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+      }
+
+      .flex_then {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+
+      .legendtext {
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(136, 136, 136, 1);
+        padding-left: 3px;
+      }
+
+      .ant-popover-open {
+        background: #fff;
+      }
+    }
+
+    .left-bottom {
+      position: absolute;
+      border-top: 1px solid @border;
+      padding: 22px 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      bottom: 0;
+      height: 76px;
+
+      .left-bottom-border {
+        width: 32px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(51, 51, 51, 1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        cursor: pointer;
+
+        &:before {
+          color: rgba(51, 51, 51, 1);
+          font-size: 20px;
+        }
+
+        .icon-color {
+          color: #fff;
+        }
+      }
+
+      .hand-in-paper {
+        width: 80px;
+        height: 34px;
+        line-height: 34px;
+        background: rgba(255, 180, 0, 1);
+        box-shadow: 0 2px 5px 0 rgba(255, 180, 0, 0.5);
+        border-radius: 17px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        &:hover {
+          background: rgba(255, 150, 0, 1);
+          box-shadow: 0 2px 5px 0 rgba(255, 180, 0, 0.5);
+        }
+        .white {
+          color: rgba(255, 255, 255, 1);
+        }
+        .icon-right,
+        .icon-color:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+
+    .left-contents {
+      padding: 0 20px;
+      overflow-y: auto;
+      height: 100%;
+      .title {
+        font-size: @font-normal;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+
+      .marginTop20-dot {
+        margin-top: 10px;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .marginLeft {
+        margin-left: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+:global {
+    .TestStudentModal{width: 680px!important;.ant-modal-footer{margin-top: -20px;}}
+    .infoTips{color:#9E9E9E;
+        padding-top:30px; 
+        border-top: 1px solid #e5e5e5;
+        .iconfont{margin-right: 5px!important;}
+        .iconfont:before{color: #9E9E9E}
+    }
+    .StudentSetList{
+        display: flex;
+        flex: 4;
+        margin-top: 14px;
+        .item{
+            flex: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            .studentName{
+                overflow:hidden;
+                text-overflow:ellipsis; 
+                white-space:nowrap;
+                margin-left: 5px;
+                max-width: 65px;
+            }
+
+            .isTransienttag{
+                width:36px;
+                height:20px;
+                background:rgba(229,229,229,1);
+                border-radius:5px;
+                text-align: center;
+                font-size:12px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                margin-left: 5px;
+            }
+        }
+        .item:hover{
+            background:rgba(230,249,240,1);
+            border-radius:5px;
+        }
+        .ant-spin-nested-loading{
+            width: 100%;
+        }
+        .underLine{
+            text-decoration:line-through;color: #b2b2b2;
+            i,.isTransienttag{
+                opacity: 0.5;
+            }
+        }
+         .ant-checkbox{display:none;}
+         .ant-checkbox-wrapper + span, .ant-checkbox + span{padding: 0;}
+         .ant-checkbox-wrapper{margin-right: 60px;margin-bottom: 20px;margin-left: 8px;
+           
+      
+        }
+        .ant-checkbox-wrapper + .ant-checkbox-wrapper{margin-left: 8px;}
+        .lady{
+            color:rgba(255,110,74,1); 
+            padding-left: 5px
+        }
+        .sexman{
+            color:rgba(34,142,255,1); 
+            padding-left: 5px
+        }
+       
+    }
+}

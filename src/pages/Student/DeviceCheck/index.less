@@ -1,0 +1,193 @@
+// 练习的设备检查页面
+.practice-container{
+  height: 100%;
+  width : 490px;
+  margin: 35px auto 0px;
+  .main{
+    position: relative;
+    overflow: hidden;
+    width:100%;
+    height:405px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+    border-radius:10px;
+    text-align: center;
+    .lamp{
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      right: 0px;
+      bottom: 50px;
+      width: 300%;
+      display: flex;
+      transition:left 0.5s ease 1s;
+      .content{
+        width: calc(~"100% / 3");
+        height: 100%;
+        flex: 1;
+        .avator{
+          margin: 40px auto 0px;
+          width : 160px;
+          height: 160px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          &.checking:after{
+            top:20px;
+            left: 20px;
+            position: absolute;
+            height: 120px;
+            width: 120px;
+            border-top:2px solid rgba(254, 153, 0,1);
+            border-left:2px solid transparent;
+            border-right:2px solid transparent;
+            border-radius:50%;
+            content:'';
+            animation: avator_checking 2s infinite ease-out;
+          }
+          .avator-img{
+            font-size: 50px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            border: 2px solid transparent;
+            &.avator-checking{
+              background: rgba(255, 248, 237,1);
+              border-color: rgba(254, 153, 0,1);
+              color : rgba(254, 153, 0,1);
+              box-shadow: 0px 5px 10px 5px rgba(255, 248, 237,0.3);
+            }
+            &.avator-success{
+              background: rgba(49, 196, 107,1);
+              border-color: rgba(49, 196, 107,1);
+              color : rgba(255, 255, 255,1);
+              box-shadow: 0px 5px 10px 5px rgba(49, 196, 107,0.3);
+            }
+            &.avator-fail{
+              background: rgba(252, 109, 73,1);
+              border-color: rgba(252, 109, 73,1);
+              color : rgba(255, 255, 255,1);
+              box-shadow: 0px 5px 10px 5px rgba(252, 109, 73,0.3);
+            }
+          }
+        }
+        .title{
+          font-size:20px;
+          color:rgba(51,51,51,1);
+          margin-top: 50px;
+        }
+        .status{
+          margin-top:20px;
+          font-size:13px;
+          color:rgba(136,136,136,1);
+          >i{
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .dots{
+      position: absolute;
+      bottom : 0px;
+      text-align: center;
+      width: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom:30px;
+      display: flex;
+      justify-content: space-around;
+      >span{
+        display: block;
+        width:6px;
+        height:6px;
+        background:rgba(255,255,255,1);
+        border:1px solid rgba(136, 136, 136, 1);
+        border-radius:50%;
+        &.checking-process{
+          background:rgba(255,153,0,1);
+          border-color : rgba(255,153,0,1);
+        }
+        &.checking-success{
+          background:rgba(3,196,107,1);
+          border-color : rgba(3,196,107,1);
+        }
+        &.checking-fail{
+          background:rgba(255,110,74,1);
+          border-color : rgba(255,110,74,1);
+        }
+
+      }
+    }
+    .wave{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .footer{
+    text-align: center;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn{
+      border-radius: 18px;
+      width: 120px;
+      height: 36px;
+      line-height: 36px;
+      color : #ffffff;
+      border : none !important;
+      box-shadow: 0px 2px 5px 2px rgba(204, 204, 204, 0.6);
+      &:disabled{
+        background:rgba(204,204,204,1) !important;
+      }
+      .text{
+        display: inline-block;
+        margin-left: 5px;
+      }
+    }
+    .setting{
+      color:#666666;
+    }
+    .enter{
+      border-radius: 22px;
+      width: 140px;
+      height: 44px;
+      line-height: 44px;
+      background: rgba(3,196,107,1);
+    }
+    .reset{
+      background:rgba(255,110,74,1);
+    }
+
+  }
+}
+
+// 基础状态设置
+.checking-color{
+  color:rgba(136,136,136,1) !important;
+}
+
+.success-color{
+  color:rgba(3,196,107,1) !important;
+}
+
+.fail-color{
+  color:rgba(255,110,74,1) !important;
+}
+
+
+
+@keyframes avator_checking {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}

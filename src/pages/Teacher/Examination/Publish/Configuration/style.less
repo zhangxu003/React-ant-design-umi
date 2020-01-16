@@ -1,0 +1,100 @@
+:global {
+
+  .releaseStep{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    
+    border-radius:10px 10px 0px 0px;
+    padding: 20px;
+    .ant-card-body{
+    padding: 0px
+    }
+    .ant-layout.ant-layout-has-sider > .ant-layout-content{
+        overflow-y: hidden;
+    }
+    .paper{
+      display: flex;
+      flex-flow:row;
+      .left-layout{
+        flex:0 0 440px;
+        width: 440px;
+        border-right: 1px solid #e5e5e5;
+        min-height: 83vh;
+        padding: 10px;
+      }
+      .right-layout{
+        flex: 1 1 auto;;
+        position: relative;
+        background: rgb(245, 245, 245);
+        .shopCart{
+          width: 100%;
+          position: absolute;
+          bottom: 35px;
+          right: 0;
+        }
+      }
+    }
+
+    .testTitle{
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E5E5E5;
+        margin-bottom: 17px;
+        .title_img{
+          width: 34px;
+          height: 34px;
+        }
+        .title{
+          font-size: 20px;
+          font-weight: 600;
+          color: rgba(51,51,51,1);
+          line-height: 28px;
+          margin-left: 6px
+        }
+    }
+
+    .lastFormSubmit{
+      display: flex;
+      justify-content: center;
+      .pre{
+        width:79px;
+        height:36px;
+        background:rgba(255,255,255,1);
+        border-radius:18px;
+        border:1px solid rgba(204,204,204,1);
+        color:rgba(136,136,136,1);
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+      .next{
+        width:79px;
+        height:36px;
+        background:rgba(255,180,0,1);
+        box-shadow:0px 2px 5px 0px rgba(255,180,0,0.5);
+        border-radius:18px;
+        color:rgba(255,255,255,1);
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+
+      .disabled{
+        background:rgba(204,204,204,1);
+        border-radius:18px;
+        cursor: not-allowed;
+        box-shadow:0px 2px 5px 0px rgba(204,204,204,1);
+      }
+    }
+  }
+ 
+}

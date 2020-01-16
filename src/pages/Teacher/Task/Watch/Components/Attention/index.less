@@ -1,0 +1,84 @@
+.warning{
+    color: #FF6E4A;
+    display: flex;
+    span{
+        margin-right: 5px;
+        background: #FF6E4A;
+        color: #fff;
+        width: 13px;
+        line-height: 13px;
+        text-align: center;
+        flex: 0 0 13px;
+        height: 13px;
+        border-radius: 13px;
+        margin-top: 4px;
+        font-size: 10px;}
+    i{
+        color: #fff;
+    }
+}
+.warnList{
+    background:rgba(245,245,245,1);
+    border-radius:5px;
+    padding: 25px 0;
+    display: flex;
+    div{
+        flex: 1;
+        text-align: center;
+        font-size:13px;
+        font-weight:500;
+        color:rgba(28,36,56,1);
+        span{
+            display: block;
+            font-size:20px;
+            font-weight:500;
+            color:rgba(28,36,56,1);
+        }
+    }
+}
+
+.attention{
+    :global{
+        .connectMS_1,.connectMS_2,.connectMS_3,.connectMS_4{
+            color: #03C46B;
+        }
+        .connectMS_9,.connectMS_6,.connectMS_14{
+            color: #228EFF;
+        }
+        .connectMS_11,.connectMS_8{
+            color: #FF9900;
+        }
+        .connectMS_13,.connectMS_10,.connectMS_5,.connectMS_7,.connectMS_12{
+            color: #FF6E4A;
+        }
+        .ant-btn,.ant-modal-footer > div > button:first-child{
+            display: inline-block;
+            width:80px;
+            height:36px;
+            background:rgba(255,255,255,1);
+            border:1px solid rgba(204, 204, 204, 1);
+            border-radius:18px;
+            font-size:14px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+        }
+        .ant-btn-primary,.ant-modal-footer > div > button:last-child{
+            display: inline-block;
+            width:110px;
+            height:36px;
+            background:rgba(3,196,107,1);
+            box-shadow:0px 2px 5px 0px rgba(3,196,107,0.5);
+            border-radius:18px;
+            font-size:14px;
+            font-weight:500;
+            color:rgba(255,255,255,1);
+        }
+        .ant-btn-primary-disabled, .ant-btn-primary.disabled, .ant-btn-primary[disabled], .ant-btn-primary-disabled:hover, .ant-btn-primary.disabled:hover, .ant-btn-primary[disabled]:hover, .ant-btn-primary-disabled:focus, .ant-btn-primary.disabled:focus, .ant-btn-primary[disabled]:focus, .ant-btn-primary-disabled:active, .ant-btn-primary.disabled:active, .ant-btn-primary[disabled]:active, .ant-btn-primary-disabled.active, .ant-btn-primary.disabled.active, .ant-btn-primary[disabled].active {
+            color: #fff!important;
+            background-color: #CCCCCC!important;
+            border-color: #CCCCCC!important;
+            text-shadow: none;
+            box-shadow: none!important;
+          }
+    }    
+}

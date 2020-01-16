@@ -1,0 +1,92 @@
+.content {
+    padding: 20px 15px;
+    .back-btn {
+        width: 220px;
+        height: 36px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+        border: none;
+        border-radius: 18px;
+        .icon-back {
+            font-size: 14px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.setTests {
+    cursor: pointer;
+}
+
+.taskInfo {
+    margin-top: 15px;
+    width: 220px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    border: 0;
+    ul {
+        padding: 0 17px;
+        li {
+            display: inline-block;
+            width: 60px;
+            margin: 15px;
+            color: 888;
+            span {
+                display: block;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: rgba(51, 51, 51, 1);
+                &.sucess {
+                    color: #03C46B
+                }
+                &.noTest {
+                    color: #888
+                }
+                &.failure {
+                    color: #FF6E4A
+                }
+            }
+        }
+    }
+    .task {
+        li {
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+    :global {
+        .ant-card-head {
+            height: 46px;
+            line-height: 46px;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            text-align: center;
+            padding: 0;
+        }
+        .ant-card-head-title {
+            padding: 0;
+        }
+        .ant-card-body {
+            padding: 17px 0 0;
+            p {
+                width: 170px;
+                font-size: 14px;
+                text-align: center;
+                margin: 0 auto;
+                font-weight: 500;
+                color: rgba(51, 51, 51, 1);
+            }
+            div {
+                border-top: 1px solid #f5f5f5;
+                height: 46px;
+                line-height: 46px;
+                text-align: center;
+            }
+        }
+    }
+}

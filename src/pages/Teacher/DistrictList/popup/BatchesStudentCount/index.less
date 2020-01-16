@@ -1,0 +1,124 @@
+.count{
+  padding-top: 25px;
+  .title{
+    font-size:14px;
+    font-weight:500;
+    color:rgba(255,110,74,1);
+    line-height:20px;
+    margin-bottom: 10px;
+    &:before{
+      content: "";
+      font-size:12px;
+      display: inline-block;
+      width:4px;
+      height:12px;
+      background:rgba(255,110,74,1);
+      margin-right: 10px;
+    }
+    .info{
+      padding-left: 10px;
+      color:rgba(136,136,136,1);
+      font-style: italic;
+    }
+  }
+  .ul{
+    margin-bottom: 12px;
+  }
+  .list{
+    li{
+      line-height:30px;
+    }
+    .name{
+      display: inline-block;
+      width: 100px;
+      font-size:16px;
+      color:rgba(3,196,107,1);
+      vertical-align: middle;
+    }
+    .status{
+      font-size:14px;
+      color:rgba(136,136,136,1);
+      vertical-align: middle;
+    }
+  }
+
+  .label{
+    color:rgba(136,136,136,1);
+  }
+
+  .table{
+    margin-top:8px;
+    border:1px solid #e8e8e8;
+    :global{
+      .ant-table{
+        color:rgba(51,51,51,1);
+        .ant-table-thead{
+          background:rgba(245,245,245,1);
+          .ant-table-header-column{
+            font-size:13px;
+            color:rgba(136,136,136,1);
+          }
+        }
+      }
+    }
+  }
+
+  .success{
+    &:global(.ant-radio-wrapper){
+      color:rgba(51,51,51,1);
+    }
+    &:global(.ant-radio-wrapper-checked){
+      color:rgba(3,196,107,1);
+    }
+    :global{
+      .ant-radio-checked{
+        &:after {
+          border-color: rgba(3,196,107,1);
+        }
+        border-color: rgba(3,196,107,1);
+        .ant-radio-inner{
+          background-color: rgba(3,196,107,1);
+          border-color: rgba(3,196,107,1);
+          &:after{
+            background-color : #ffffff;
+            top: 4px;
+            left: 4px;
+            width: 6px;
+            height: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .error{
+    &:global(.ant-radio-wrapper){
+      color:rgba(136,136,136,1);
+    }
+    &:global(.ant-radio-wrapper-checked){
+      color:rgba(255,110,74,1);
+    }
+    :global{
+      .ant-radio-checked{
+        &:after {
+          border-color: rgba(255,110,74,1);
+        }
+        border-color: rgba(255,110,74,1);
+        .ant-radio-inner{
+          background-color: rgba(255,110,74,1);
+          border-color: rgba(255,110,74,1);
+          &:after{
+            background-color : #ffffff;
+            top: 4px;
+            left: 4px;
+            width: 6px;
+            height: 6px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+

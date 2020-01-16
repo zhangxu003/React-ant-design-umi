@@ -1,0 +1,31 @@
+
+:global {
+  .editSeatNumberModal {
+    .item {
+      height: 50px;
+      padding: 12px 0px;
+      border-bottom: 1px solid #E5E5E5;
+      div {
+        float: left;
+        width: 80px;
+        color: #333;
+        font-size: 13px;;
+      }
+      input {
+        width: calc(~'100% - 80px');
+        border: 0;
+        outline: none;
+        font-size: 14px;
+      }
+      input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+    }
+  }
+}

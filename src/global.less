@@ -1,0 +1,422 @@
+@import '/font/iconfont/iconfont.css';
+
+:global(.iconfont) {
+  &:before {
+    font-family: 'iconfont', serif !important;
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// 统一改写弹窗样式
+.ant-dropdown-menu {
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 320px;
+}
+.ant-modal {
+  //弹窗样式
+  .ant-modal-header {
+    padding: 40px 40px 0 40px;
+    border-bottom: none !important;
+    .ant-modal-title {
+      color: #1c2438;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  .ant-modal-body {
+    padding: 20px 40px !important;
+    max-height: calc(100vh - 140px);
+    overflow: auto;
+  }
+  .ant-modal-footer {
+    padding: 0 40px 40px 40px !important;
+    border-top: none !important;
+  }
+  .ant-modal-footer > div > button {
+    border-radius: 18px;
+    // &:first-child {
+    //   border: none;
+    //   color: #888888;
+    // }
+    &:last-child {
+      background-color: #03c46b;
+      &:last-child[disabled] {
+        color: rgba(136, 136, 136, 1);
+        background-color: rgba(204, 204, 204, 1);
+        border-color: transparent;
+        text-shadow: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .ant-modal-confirm-btns {
+    .ant-btn {
+      min-width: 80px;
+    }
+  }
+}
+
+// 统一改写搜索框样式（同蓝湖）
+.ant-input-search {
+  .ant-input {
+    height: 36px;
+    border: 1px solid rgba(204, 204, 204, 1);
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    padding-left: 15px;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .ant-input-group-addon {
+    background-color: #fff;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    .ant-input-search-button {
+      height: 36px;
+      min-width: 36px;
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 18px;
+      background-color: transparent;
+      border-color: rgba(204, 204, 204, 1);
+      color: rgba(51, 51, 51, 1);
+      padding: 0 15px 0 10px;
+      border-left: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// 新增Butten 样式风格
+// 原有风格 type	 primary dashed danger link
+// 新增风格同蓝湖（ 高亮操作-light ）
+.ant-btn {
+  height: 36px;
+  min-width: 36px;
+  > span + .anticon,
+  > .anticon + span {
+    margin-left: 5px;
+  }
+
+  // 主要操作-minor
+  &.ant-btn-main {
+    background: rgba(3, 196, 107, 1);
+    border-color: transparent;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 5px 0 rgba(3, 196, 107, 0.5);
+    &:hover {
+      background: rgba(0, 217, 117, 1);
+      border-color: transparent;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 1);
+      box-shadow: 0 2px 5px 0 rgba(0, 217, 117, 0.5);
+    }
+    &:active {
+      background: rgba(3, 175, 96, 1);
+      border-color: transparent;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 1);
+      box-shadow: none;
+    }
+    &.ant-btn-loading {
+      background: rgba(3, 175, 96, 1);
+      border-color: transparent;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 1);
+      box-shadow: none;
+    }
+  }
+
+  // 高亮操作-light
+  &.ant-btn-light {
+    background: #ffb400;
+    box-shadow: 0 2px 5px 0 rgba(255, 153, 0, 0.5);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 1);
+    border-color: transparent;
+    &:hover {
+      color: #fff;
+      font-size: 13px;
+      background: rgba(255, 180, 67, 1);
+      box-shadow: 0 2px 5px 0 rgba(255, 180, 67, 0.5);
+      border-color: transparent;
+    }
+    &:active {
+      color: #fff;
+      font-size: 13px;
+      background: rgba(255, 132, 0, 1);
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+
+  // 高亮操作-light
+  &.ant-btn-warn {
+    background: rgba(255, 110, 74, 1);
+    box-shadow: 0 2px 5px 0 rgba(255, 110, 74, 0.5);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 1);
+    border-color: transparent;
+    &:hover {
+      color: #fff;
+      font-size: 13px;
+      background: rgba(255, 140, 112, 1);
+      box-shadow: 0 2px 5px 0 rgba(255, 110, 74, 0.5);
+      border-color: transparent;
+    }
+    &:active {
+      color: #fff;
+      font-size: 13px;
+      background: rgba(240, 94, 57, 1);
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+
+  // 次要操作-minor
+  &.ant-btn-minor {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(204, 204, 204, 1);
+    font-size: 13px;
+    color: rgba(51, 51, 51, 1);
+    box-shadow: none;
+    &:hover {
+      color: rgba(51, 51, 51, 1);
+      font-size: 13px;
+      background: rgba(245, 245, 245, 1);
+      box-shadow: none;
+      border: 1px solid rgba(204, 204, 204, 1);
+    }
+    &:active {
+      color: rgba(51, 51, 51, 1);
+      font-size: 13px;
+      background: rgba(229, 229, 229, 1);
+      box-shadow: none;
+      border: 1px solid rgba(204, 204, 204, 1);
+    }
+    &.ant-btn-loading {
+      color: rgba(51, 51, 51, 1);
+      font-size: 13px;
+      background: rgba(229, 229, 229, 1);
+      box-shadow: none;
+      border: 1px solid rgba(204, 204, 204, 1);
+    }
+  }
+}
+
+// 统一改写分页器样式（同蓝湖）
+.ant-pagination {
+  height: 36px !important;
+  li {
+    margin: 0;
+    height: 36px !important;
+    line-height: 32px !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 1px solid rgba(229, 229, 229, 1) !important;
+    border-bottom: 1px solid rgba(229, 229, 229, 1) !important;
+    background: #fff !important;
+    border-radius: 0;
+    &:first-child {
+      border-top-left-radius: 18px;
+      border-bottom-left-radius: 18px;
+      border-left: 1px solid rgba(229, 229, 229, 1) !important;
+    }
+    &:last-child {
+      border-right: 1px solid rgba(229, 229, 229, 1) !important;
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+  }
+
+  .ant-pagination-item-link {
+    width: 36px;
+    line-height: 34px !important;
+    height: 100%;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  .ant-pagination-item-active:focus,
+  .ant-pagination-item-active:hover {
+    color: rgba(3, 196, 107, 1);
+  }
+
+  .ant-pagination-prev {
+    .ant-pagination-item-link {
+      i {
+        display: none;
+      }
+      &:before {
+        content: '\e631';
+        display: inline;
+        font-family: 'iconfont', serif;
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+  }
+  .ant-pagination-next {
+    .ant-pagination-item-link {
+      i {
+        display: none;
+      }
+      &:before {
+        content: '\e632';
+        display: inline;
+        font-family: 'iconfont', serif;
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// 统一改写antdesign message 样式
+.ant-message {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 1);
+  .ant-message-notice-content {
+    padding: 0;
+    background: transparent;
+    box-shadow: transparent;
+    border-radius: 4px;
+    border-color: transparent;
+    .ant-message-custom-content {
+      padding: 18px 25px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      .anticon {
+        font-size: 20px;
+        margin-right: 18px;
+      }
+      // 提示的message
+      &.ant-message-info {
+        background: rgba(236, 245, 255, 1);
+        border: 1px solid rgba(219, 237, 255, 1);
+        box-shadow: 0 3px 7px 0 rgba(34, 142, 255, 0.1);
+        .anticon {
+          color: rgba(34, 142, 255, 1);
+        }
+      }
+      // 成功的message
+      &.ant-message-success {
+        background: rgba(222, 255, 238, 1);
+        border: 1px solid rgba(191, 252, 220, 1);
+        box-shadow: 0 3px 7px 0 rgba(25, 190, 107, 0.1);
+        .anticon {
+          color: rgba(3, 196, 107, 1);
+        }
+      }
+      // 错误的message
+      &.ant-message-error {
+        background: rgba(255, 241, 238, 1);
+        border: 1px solid rgba(249, 231, 227, 1);
+        box-shadow: 0 3px 7px 0 rgba(255, 110, 74, 0.1);
+        .anticon {
+          color: rgba(255, 110, 74, 1);
+        }
+      }
+      // 警告
+      &.ant-message-warning {
+        background: rgba(255, 245, 231, 1);
+        border: 1px solid rgba(250, 238, 218, 1);
+        box-shadow: 0 3px 7px 0 rgba(255, 153, 0, 0.1);
+        .anticon {
+          color: rgba(255, 153, 0, 1);
+        }
+      }
+    }
+  }
+}
+
+// 统一改写antdesign tag 标签的默认 样式
+:global {
+  .ant-tag {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(204, 204, 204, 1);
+    border-radius: 5px;
+    line-height: 18px;
+    &.ant-tag-green {
+      color: rgba(3, 196, 107, 1);
+      background: rgba(230, 249, 240, 1);
+      border-color: rgba(3, 196, 107, 1);
+    }
+
+    &.ant-tag-orange {
+      color: rgba(255, 180, 0, 1);
+      background: rgba(255, 248, 230, 1);
+      border-color: rgba(255, 180, 0, 1);
+    }
+
+    &.ant-tag-blue {
+      color: rgba(34, 142, 255, 1);
+      background: rgba(233, 244, 255, 1);
+      border-color: rgba(34, 142, 255, 1);
+    }
+  }
+}
+
+/* 定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* 定义滚动条轨道 内阴影+圆角 */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(245, 245, 245, 1);
+}
+
+/* 定义滑块 内阴影+圆角 */
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: rgba(208, 208, 208, 1);
+}
+
+video::-webkit-media-controls-enclosure {
+  width: 100% !important;
+  margin-left: 0 !important;
+}

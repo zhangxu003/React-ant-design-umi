@@ -1,0 +1,52 @@
+.content{
+  padding: 20px 15px;
+  .back-btn{
+    width:220px;
+    height:36px;
+    background:rgba(255,255,255,1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    border: none;
+    border-radius:18px;
+    .icon-back{
+      font-size: 14px;
+      margin-right: 5px;
+    }
+  }
+  h4{
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    margin-bottom: 5px;
+  }
+  .group{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content : space-between;
+    flex-wrap : wrap;
+    .select-params{
+      width:66px;
+      font-weight:500;
+      height:28px;
+      line-height: 28px;
+      padding: 0px;
+      text-align: center;
+      margin-bottom: 10px;
+      color:rgba(51,51,51,1);
+      font-size:13px;
+      background:rgba(255,255,255,1);
+      border-radius:5px;
+      border:1px solid rgba(204,204,204,1);
+      &:before{
+        content: "";
+        display: none !important;
+      }
+    }
+    :global{
+      .ant-radio-button-wrapper-checked{
+        color:rgba(255,255,255,1);
+        border-color: transparent;
+        background:linear-gradient(270deg,rgba(46,201,163,1) 0%,rgba(3,196,107,1) 100%);
+        box-shadow:0px 2px 2px 0px rgba(3,196,107,0.5);
+      }
+    }
+  }
+}

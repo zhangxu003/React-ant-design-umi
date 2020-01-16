@@ -1,0 +1,33 @@
+@import '~antd/lib/style/themes/default.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 100% 100%;
+  .children{
+    height: calc( 100% - 93px );
+  }
+}
+
+
+
+@media (min-width: @screen-md-min) {
+  .container {
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: 100% 100%;
+  }
+
+
+}
+
+
+.copyright{
+  font-size:13px;
+  font-weight:400;
+  color:rgba(136,136,136,1);
+}

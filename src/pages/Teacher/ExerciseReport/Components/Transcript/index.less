@@ -1,0 +1,129 @@
+.reportTranscript {
+    .transcriptTable {
+        td {
+            background: #fff;
+        }
+
+        td,
+        th {
+            border: 1px solid #E5E5E5;
+            padding: 10px;
+            color: #888888;
+            font-size: 13px;
+        }
+
+        .btnGroups {
+            color: #228EFF;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .btnWarning {
+            color: #FF6E4A;
+        }
+
+        .chartCell {
+            padding: 0 !important;
+        }
+
+        .tendencyLine span {
+            padding-right: 10px;
+        }
+
+        :global {
+            // .ant-table-header {
+            //     overflow: hidden !important;
+            // }
+
+            .ant-table-body {
+                border-bottom: 1px solid #e8e8e8 !important;
+            }
+
+            .anticon-arrow-up {
+                color: #03C46B;
+            }
+
+            .anticon-arrow-down {
+                color: #FF6E4A;
+            }
+
+            .g2-tooltip {
+                display: none !important
+            }
+        }
+    }
+
+    .pagination {
+        text-align: right;
+        padding: 20px 0 10px 0;
+    }
+
+    .suggestResult {
+        .suggestResultPanel {
+            padding-bottom: 20px;
+
+            .suggestHeader {
+                .title {
+                    font-weight: bold;
+                    color: #333333;
+                    font-size: 14px;
+                }
+            }
+
+            .suggestType {
+                color: #888888;
+                padding-top: 15px;
+                width: 120px;
+                float: left;
+            }
+
+            .middleDivider {
+                margin: 0 0 10px 0;
+            }
+
+            .studentList {
+                font-size: 13px;
+                padding: 10px 20px 10px 0px;
+                line-height: 30px;
+                float: left;
+                width: calc(100% - 120px);
+
+                .cName {
+                    font-weight: bold;
+                    width: 100%;
+                    float: left;
+                }
+
+                .studentListItem {
+                    float: left;
+                    width: 235px;
+                    height: 32px;
+                    padding: 0 15px;
+                    line-height: 32px;
+                    margin-right: 15px;
+                    margin-bottom: 10px;
+                    background: #FAFAFA;
+                    border: 1px solid #E5E5E5;
+                    border-radius: 4px;
+
+                    .rank {
+                        width: 75px;
+                        display: inline-block;
+                    }
+
+                    .name {
+                        width: 72px;
+                        font-weight: bold;
+                        display: inline-block;
+                    }
+
+                    .diffRank {
+                        color: #888888;
+                        display: inline;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}

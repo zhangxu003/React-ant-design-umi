@@ -1,0 +1,238 @@
+@import '~antd/lib/style/themes/default.less';
+
+.exerciseReport {
+  // padding-bottom: 20px;
+  .menuName {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+
+    span {
+      color: rgba(255, 255, 255, 1);
+      font-weight: 500;
+      font-size: 13px;
+
+      i {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .backtop {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    text-align: center;
+    .text {
+      font-size: 14px;
+      line-height: 38px;
+    }
+    :global {
+      .iconfont {
+        font-size: 24px;
+      }
+    }
+  }
+
+  :global {
+    .ant-back-top {
+      right: 24px;
+      bottom: 24px;
+    }
+  }
+}
+
+.PaperEvaluation {
+  .PaperEvaluation_Top {
+    display: flex;
+    justify-content: space-between;
+    .closeBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 30px;
+      background: rgba(51, 51, 51, 1);
+      color: #b2b2b2;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .closeBtn:hover {
+      color: #fff;
+      background: rgba(255, 110, 74, 1);
+    }
+    .paperName {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(216, 216, 216, 1);
+      line-height: 20px;
+    }
+  }
+
+  .PaperEvaluation_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    .paperLeft {
+      width: 812px;
+      height: 610px;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+      overflow: auto;
+    }
+    .drawRef {
+      min-height: 610px;
+      overflow-x: hidden;
+    }
+    .paperRight {
+      margin-left: 10px;
+      // flex: 1;
+      height: 100%;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+      .paperIconContent {
+        height: 50%;
+        padding-bottom: 10px;
+        background: rgba(0, 0, 0, 0.65);
+      }
+      .paperIcon {
+        width: 182px;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: rgba(51, 51, 51, 1);
+        // margin-bottom: 2%;
+        // overflow-x: hidden;
+        // overflow-y: auto;
+      }
+      .paperInfo {
+        width: 182px;
+        height: 50%;
+        background: rgba(51, 51, 51, 1);
+        // overflow-x: hidden;
+        // overflow-y: auto;
+      }
+    }
+  }
+
+  .PaperEvaluation_bottom {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 190px);
+    .closeBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 30px;
+      background: rgba(51, 51, 51, 1);
+      color: #b2b2b2;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .flex {
+      display: flex;
+      border-radius: 4px;
+      background: rgba(51, 51, 51, 1);
+      .modelBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 30px;
+        color: #b2b2b2;
+        cursor: pointer;
+      }
+    }
+  }
+  :global {
+    .greycolor {
+      color: rgba(216, 216, 216, 1);
+    }
+    .ant-tabs-nav {
+      width: 100%;
+    }
+    .ant-tabs {
+      height: 100%;
+    }
+    .ant-tabs .ant-tabs-top-content {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-ink-bar {
+      visibility: inherit;
+      background-color: #03c46b;
+      width: 10px !important;
+      left: 22%;
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+      width: 50%;
+      text-align: center;
+      color: rgba(136, 136, 136, 1);
+      border-color: rgba(0, 0, 0, 1);
+      background: rgba(0, 0, 0, 1);
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+      color: rgba(216, 216, 216, 1);
+      border-color: rgba(51, 51, 51, 1);
+      background: rgba(51, 51, 51, 1);
+    }
+    .ant-drawer-content {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // height: 100%;
+      background: rgba(0, 0, 0, 1);
+      // color: #fff;
+    }
+    .ant-drawer-body {
+      height: 100%;
+      overflow: hidden;
+      padding: 10px 10px;
+    }
+    .ant-drawer-wrapper-body {
+      height: 100%;
+      overflow: hidden;
+    }
+    .ant-drawer-close {
+      width: 30px;
+      height: 30px;
+      right: 20px;
+      z-index: 99;
+      .anticon-close {
+        box-shadow: 0 0 10px 0 rgba(60, 69, 78, 0.15);
+        background: rgba(0, 0, 0, 1);
+        opacity: 0.2;
+        color: #fff;
+        font-size: 6px;
+        height: 20px;
+        width: 20px;
+        line-height: 23px;
+        border-radius: 10px;
+        position: fixed;
+      }
+    }
+    .ant-btn-primary {
+      background-color: #03c46b !important;
+      box-shadow: 0 2px 5px 0 rgba(3, 196, 107, 0.5) !important;
+    }
+  }
+}
+
+.divReportOverviewContent {
+  height: calc(100% - 85px);
+  .ExampaperProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 182px);
+    height: 100%;
+    background: #333;
+  }
+}

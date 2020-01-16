@@ -1,0 +1,160 @@
+:global {
+
+    .examination{
+        .card-container > .ant-tabs-card > .ant-tabs-content {
+        height: 120px;
+        margin-top: -16px;
+        }
+
+        .card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
+        background: #fff;
+        padding: 16px;
+        }
+
+        .card-container > .ant-tabs-card > .ant-tabs-bar {
+        border-color: #fff;
+        }
+
+        .card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+        border-color: transparent;
+        background: transparent;
+        }
+
+        .card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+        border-color: #fff;
+        background: #fff;
+        }
+        .card-container{
+            background:rgba(245,245,245,1);
+            border-radius:5px;
+            padding-top: 10px;
+            .ant-tabs-nav .ant-tabs-tab-active{
+                background: #fff;
+                color:rgba(3,196,107,1);
+            }
+
+
+            .ant-tabs-ink-bar {
+                left: 16px !important;
+                width: 3px !important;
+                height: 12px !important;
+                top: 12px !important;
+                color:rgba(3,196,107,1);
+                border-radius:2px;
+            }
+
+            .cardFlex{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .learningGroup{
+                margin-top: 10px;
+            }
+
+            .ant-tabs .ant-tabs-left-bar .ant-tabs-tab, .ant-tabs .ant-tabs-right-bar .ant-tabs-tab {
+                display: block;
+                float: none;
+                margin: 0 0 0px 0;
+                padding: 8px 24px;
+            }
+
+            .classCard{
+                // min-width:325px;
+                height:70px;
+                background:rgba(255,255,255,1);
+                border-radius:8px;
+                border:1px solid rgba(204,204,204,1);
+                padding: 8px 15px;
+                margin: 6px;
+                position: relative;
+                .class{
+                    font-size:18px;
+                    font-weight:500;
+                    color:rgba(51,51,51,1);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .cardflex{
+                    display: flex;
+                    align-items: center
+                }
+                .cardbetween{
+                    justify-content: space-between;
+                }
+                .teacherName{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 150px;
+                }
+                .ant-checkbox-wrapper{
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                }
+                .ant-divider, .ant-divider-vertical{
+                    top: 0.06em;
+                }
+            }
+
+            .classCard_checked{
+                // min-width:325px;
+                height:70px;
+                background:rgba(230,249,240,1);
+                border-radius:8px;
+                border:1px solid rgba(3,196,107,1);
+                padding: 10px 15px;
+                margin: 6px;
+                position: relative;
+                .class{
+                    font-size:18px;
+                    font-weight:500;
+                    color:rgba(3,196,107,1);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .cardflex,i{
+                    display: flex;
+                    align-items: center;
+                    color:rgba(3,196,107,1);
+                }
+                .cardbetween{
+                    justify-content: space-between;
+                }
+                .teacherName{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 150px;
+                }
+                .ant-checkbox-wrapper{
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                }
+                .ant-divider, .ant-divider-vertical{
+                    top: 0.06em;
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+.teacherName{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+}
+
+.checkbox{
+  position: absolute;
+  top: 4px;
+  right: 6px;
+}

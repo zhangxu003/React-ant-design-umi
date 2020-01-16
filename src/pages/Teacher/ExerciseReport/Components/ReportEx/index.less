@@ -1,0 +1,140 @@
+:global {
+  .ant-drawer-content{
+    overflow-y:auto;
+  }
+  .ReportEx {
+    overflow: hidden;
+    //margin-top: -80px;
+    .inner-title {
+      color: #888888;
+    }
+    .ant-card-body {
+      padding: 0px;
+    }
+    .ant-layout.ant-layout-has-sider > .ant-layout-content {
+      overflow-y: hidden;
+    }
+    .report {
+      margin-top: 0px;
+      padding-top: 0px;
+
+      .ant-tabs-bar {
+        border-bottom: none;
+      }
+      .report-links {
+        line-height: 20px;
+        height: 40px;
+        .report-links-btn {
+          position: relative;
+          margin-right: 30px;
+          cursor: pointer;
+        }
+        .active {
+          font-weight: bold;
+        }
+        .active:after {
+          content: '';
+          bottom: -5px;
+          width: 10px;
+          height: 4px;
+          background-color: #03c46b;
+          position: absolute;
+          left: 44%;
+          border-radius: 2px;
+        }
+        .class-selecter-box {
+          margin-top: -8px;
+          float: right;
+        }
+      }
+      .paperreport {
+        //height: 800px;
+        display: flex;
+        min-width: 1200px;
+        .flexLeft{
+          width: 205px;
+
+        }
+        .ant-anchor{
+          position: absolute;
+        }
+
+        .ant-anchor-ink{
+          display: none;
+        }
+        .ant-anchor-wrapper{
+          overflow: hidden;
+        }
+        .selectpaperDrawer{
+          position: absolute;
+          width: 205px;
+          z-index: 20;
+          .tag{
+              position: absolute;
+              left: 202px;
+              top: 140px;
+              width: 36px;
+              height: 100px;
+              background-image:url('../../../../../assets/examination/colse_plan_btn_bg.png');
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+              cursor: pointer;
+              .text{
+                  text-align: center;
+                  width: 18px
+              }
+          }
+      }
+      .selectpaperDraweropen{
+        width: 0px;
+        .tag{
+            position:absolute;
+            right: -34px;
+            top: 140px;
+            width: 36px;
+            height: 100px;
+            background-image: url('../../../../../assets/examination/colse_plan_btn_bg.png');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            cursor: pointer;
+            .text{
+                text-align: center;
+                width: 18px
+            }
+        } 
+    }
+      }
+
+      .ant-tabs-nav .ant-tabs-tab {
+        margin-right: 0px;
+      }
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 0px 10px rgba(60, 69, 78, 0.15);
+      :global {
+        .ant-tabs-nav .ant-tabs-tab-active {
+          color: #333;
+          font-weight: bold;
+          font-size: 14px;
+        } // .ant-tabs-ink-bar {
+        //     left: 20%;
+        //     bottom: 8px;
+        //     width: 10px !important;
+        // }
+        .ant-layout-sider,
+        .ant-layout-content {
+          background-color: #fff;
+        }
+        .ant-layout-content {
+          border-left: 1px solid #e8e8e8;
+        }
+        .ant-table-thead > tr > th {
+          border-top: 1px solid #e8e8e8;
+        }
+      }
+    }
+  }
+}

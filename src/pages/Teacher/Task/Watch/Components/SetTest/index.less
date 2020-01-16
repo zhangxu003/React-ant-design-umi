@@ -1,0 +1,20 @@
+.seat{
+    height: 50px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 50px;
+    color: #888;
+    span{
+        width: 105px;
+        color: #333;
+        display: inline-block;
+    }
+    &:last-child{
+        border:0;
+    }
+}
+:global{
+    .setTestInfo{
+        .ant-btn{display:none;}
+        .ant-btn-primary{display: inline-block;}
+    }
+}

@@ -1,0 +1,134 @@
+.container {
+    height: 100%;
+    overflow: hidden;
+    .head {
+        height: 54px;
+        line-height: 54px;
+        position: relative;
+        background: linear-gradient(90deg, rgba(3, 196, 107, 0.91), rgba(3, 221, 120, 0.91));
+        box-shadow: 0px 2px 15px 0px rgba(3, 196, 107, 0.4);
+        z-index: 2;
+        .logo {
+          position: absolute;
+          top: 12px;
+          left: 14px;
+          width: 310px;
+          height: 30px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .ip {
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            background-size: cover;
+            width: 148px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            font-size: 13px;
+            color: white;
+            transform: translateX(-50%);
+            font-weight: 400;
+        }
+        .user-center {
+            position: absolute;
+            top: 0px;
+            height: 54px;
+            line-height: 54px;
+            right: 115px;
+            .colorWhite{color: #fff;}
+            :global{
+                .icon-help{
+                    color: #fff;
+                    padding-left: 5px;
+                    padding-right: 20px;
+                }
+            }
+            .drap-menu {
+                .icon {
+                    vertical-align: middle;
+                    font-size: 20px;
+                    transform: scale(0.5,0.5);
+                    color: rgba(22, 153, 92, 1);
+                }
+            }
+            .divider{
+              background:rgba(22,153,92,1);
+              margin:0px 0px 0px 15px;
+            }
+        }
+        .commands {
+            position: absolute;
+            top: 15px;
+            right: 0px;
+            margin: 0px;
+            padding: 0px;
+            display: inline-flex;
+            margin-right: 5px;
+            li {
+                width: 33px;
+                height: 26px;
+                cursor: pointer;
+                color: #696969;
+                align-items: center;
+                justify-content: center;
+                transition: all ease-in-out 300ms;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 26px 26px;
+            }
+        }
+    }
+    .content {
+        height: calc(~"100% - 54px");
+        min-width: 1000px;
+        overflow: auto;
+        .hasCover{
+          position: fixed;
+          z-index: 1000;
+          top: 54px;
+          left: 0px;
+          bottom: 0px;
+          right: 0px;
+          background: rgba(255,255,255,0.1)
+        }
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
+    :global {
+        .app-sys-command-container {
+            -webkit-app-region: drag;
+            .sys-commands{
+              -webkit-app-region: no-drag;
+            }
+        }
+    }
+}
+
+.menu {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 20px;
+    .username {
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(51, 51, 51, 1);
+    }
+    .userschool {
+        font-size: 12px;
+        font-weight: 500;
+        color: rgba(136, 136, 136, 1);
+    }
+    :global {
+        .ant-dropdown-menu-item {
+            padding: 8px 20px;
+        }
+        .ant-dropdown-menu-item-divider {
+            margin: 4px 10px;
+        }
+    }
+}

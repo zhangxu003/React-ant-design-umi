@@ -1,0 +1,177 @@
+.confirmStep {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px 5px 0 0;
+  background: #fff;
+  padding: 10px 30px;
+}
+.title {
+  position: relative;
+  padding: 5px 0 15px 0;
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  line-height: 28px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.detailCont {
+  position: relative;
+}
+.backBtn {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  z-index: 2;
+  i {
+    font-size: 13px;
+    color: #333;
+  }
+  &:hover,
+  &:hover i {
+    color: #03c46b;
+  }
+}
+.item {
+  margin: 10px 0 20px 0;
+}
+.itemTit {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: bolder;
+  color: #333;
+  line-height: 18px;
+}
+.itemContent {
+  padding: 0 10px;
+  width: 100%;
+  min-height: 40px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  .paper {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  :global {
+    .ant-avatar {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+.examSetting {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+.setTit {
+  color: #888;
+}
+.setCont {
+  color: #333;
+}
+.settingItem {
+  margin-right: 4vw;
+}
+.examClass {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  justify-content: space-between;
+  .classList {
+    flex: 1;
+    max-width: calc(~'100% - 110px');
+  }
+}
+.checkBtn {
+  cursor: pointer;
+  color: #228eff;
+  border-bottom: 1px solid #228eff;
+}
+.paper {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  justify-content: space-between;
+  min-height: 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.preview {
+  cursor: pointer;
+  margin-left: 20px;
+  color: #228eff;
+  font-size: 13px;
+  i {
+    color: #228eff;
+    font-family: 13px;
+  }
+}
+.right {
+  display: flex;
+}
+.rightItem {
+  margin-right: 20px;
+}
+.studentTable {
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+  position: relative;
+  :global {
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 10px 16px;
+    }
+    .ant-table-pagination {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin: 10px 0;
+      float: none;
+    }
+  }
+  .studentCode {
+    i {
+      padding-left: 4px;
+      font-size: 14px !important;
+      color: #03c46b;
+    }
+  }
+}
+.bottom {
+  margin: 18px 0;
+  align-items: center;
+  font-size: 13px;
+  justify-content: space-between;
+}
+.studentName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 120px;
+}
+
+.confirm:global(.ant-modal) {
+  :global {
+    padding: 0 !important;
+    .ant-modal-body {
+      padding: 0 !important;
+      .ant-modal-confirm-body {
+        padding: 0 !important;
+        height: calc(100vh - 150px);
+        overflow: hidden;
+        .ant-modal-confirm-content {
+          margin-top: 0;
+          height: 100%;
+        }
+      }
+      .ant-modal-confirm-btns {
+        display: none;
+      }
+    }
+  }
+}

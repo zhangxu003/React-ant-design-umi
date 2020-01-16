@@ -1,0 +1,32 @@
+.addNew{
+    :global{
+        .ant-table-bordered .ant-table-thead > tr > th, .ant-table-bordered .ant-table-tbody > tr > td{border-right: 0;}
+        .ant-table-thead > tr:first-child > th:last-child,.ant-table-bordered .ant-table-tbody > tr > td:last-child{ border-right: 1px solid #e8e8e8; }
+        .ant-table-thead > tr > th, .ant-table-tbody > tr > td{padding: 5px 6px;}
+        .ant-modal-footer > div > button:first-child{display: none;}
+    }
+    .infomation{
+        .tips{
+            color:rgba(255,110,74,1);
+            font-size:13px;
+            margin-top: -10px;
+        }
+        :global{
+            .ant-table-header{margin-bottom: 0!important;overflow: hidden!important;}
+        }
+    }
+    .examNoWidth{
+        max-width:150px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; 
+        span{
+            display: block;
+            max-width:150px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; 
+        }
+    }
+    .examNameWidth{
+        max-width:80px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; 
+        span{
+            display: block;
+            max-width:80px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; 
+        }
+    }
+}
