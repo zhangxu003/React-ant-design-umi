@@ -43,7 +43,7 @@
     "@babel/runtime": "^7.1.5",
     "antd": "^3.16.1",
     "atool-l10n": "^0.4.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "bizcharts": "^3.4.0",
     "bizcharts-plugin-slider": "^2.1.1-beta.1",
     "braft-editor": "^2.3.1",
